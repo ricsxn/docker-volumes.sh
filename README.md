@@ -63,7 +63,7 @@ In addition to the steps provided in the original example, this utility takes ca
 To manage options, it is recommended to modify the `migrate_container.sh` code inside the creation of `STEP_CMDS` file at the line starting with the assignment of the `IMGNAME` variable. At the end of that line a `sed`piped chain is in charge to filter out unwanted options. Please modify this line accordingly to your needs.
 Enabling the `DRYRUN` option (placing a non zero value), migration commands will be not executed but only printed in the standard output.
 This option could be very useful to generate and test migration scripts.
-This script also generates the `migrate_container.log` log file, `DRYRUN`option is acrive, the  file will contain a shell script with all necessary commands to perform the migration, otherwhise it will contain the list of executed commans plus its standard output and standard error.
+This script also generates the `migrate_container.log` log file, if `DRYRUN`option is acrive, the  file will contain a shell script with all necessary commands to perform the migration, otherwhise it will contain the list of executed commans plus its standard output and standard error.
 
 # Notes
 * This script could have been written in Python or Go, but the tarfile module and the tar package lack support for writing sparse files.
